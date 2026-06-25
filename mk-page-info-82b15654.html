@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mk体育 · 简明指南与使用提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.65;
+            color: #1e293b;
+            padding: 2.5rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 44rem;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 12px 28px rgba(0, 0, 0, 0.04);
+            padding: 2.8rem 2rem 3.5rem;
+            transition: padding 0.2s;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.3;
+            margin-bottom: 0.2rem;
+            color: #0f172a;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            border-left: 3px solid #94a3b8;
+            padding-left: 1rem;
+            margin: 0.75rem 0 2.25rem;
+            font-weight: 400;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 2.5rem;
+            margin-bottom: 0.8rem;
+            color: #1e293b;
+            border-bottom: 1px solid #e9edf2;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 1.6rem 0 0.4rem;
+            color: #334155;
+        }
+
+        p {
+            margin: 0.9rem 0;
+        }
+
+        .highlight-box {
+            background: #f1f5f9;
+            padding: 1.2rem 1.5rem;
+            border-radius: 16px;
+            margin: 1.8rem 0 1.2rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .highlight-box p {
+            margin: 0.25rem 0;
+        }
+
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.4rem 0 1rem;
+        }
+
+        .card-list .item {
+            flex: 1 1 180px;
+            background: #fafcfd;
+            border-radius: 14px;
+            padding: 1rem 1.25rem;
+            border: 1px solid #eef2f6;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            transition: background 0.2s, border-color 0.2s;
+        }
+
+        .card-list .item:hover {
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+        }
+
+        .card-list .item strong {
+            display: block;
+            font-weight: 500;
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 0.2rem;
+        }
+
+        .card-list .item span {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        .tagline {
+            background: #f8fafc;
+            border-radius: 40px;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            font-size: 0.82rem;
+            color: #475569;
+            border: 1px solid #e2e8f0;
+            margin: 0.3rem 0 0.5rem;
+        }
+
+        .notice-card {
+            background: #fffbeb;
+            border-left: 4px solid #fbbf24;
+            padding: 1.25rem 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0 1.8rem;
+        }
+
+        .notice-card p {
+            margin: 0.25rem 0;
+            font-size: 0.95rem;
+            color: #4a3b22;
+        }
+
+        .inline-link {
+            color: #1a4c7a;
+            text-decoration: none;
+            font-weight: 450;
+            border-bottom: 1px dotted #b3c9e0;
+            transition: border-bottom 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            color: #0b2b4a;
+            border-bottom: 1px solid #1a4c7a;
+        }
+
+        .faq-item {
+            margin: 1.4rem 0 0.6rem;
+            padding: 0.2rem 0 0.2rem 0.8rem;
+            border-left: 2px solid #dce2eb;
+        }
+
+        .faq-item q {
+            font-weight: 480;
+            font-style: normal;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-item p {
+            margin: 0.1rem 0 0.4rem;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 2rem 0 1.2rem;
+        }
+
+        footer {
+            margin-top: 2.8rem;
+            font-size: 0.82rem;
+            color: #94a3b8;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 1.6rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        footer span {
+            display: inline-block;
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 1.2rem 0.75rem; }
+            .page { padding: 1.8rem 1.2rem 2.5rem; }
+            h1 { font-size: 1.8rem; }
+            .card-list .item { flex: 1 1 100%; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <h1>mk体育 · 使用说明与访问提醒</h1>
+    <div class="subtitle">一份基于日常操作的简明指南，帮助新用户快速了解平台特色与边界</div>
+
+    <p><strong>mk体育</strong> 是一个提供体育信息与服务的站点，面向对赛事动态、数据查询和内容交流有需求的用户。本文档从实际使用出发，整理了关键功能点与访问时的注意事项，供你参考。</p>
+
+    <!-- 摘要卡片区 -->
+    <div class="highlight-box">
+        <p>📋 <strong>一句话摘要</strong>：通过 <a href="https://mk-page-sport.com" class="inline-link">mk体育</a> 可以获取体育相关资讯与工具，内容聚焦于主流赛事和基础数据服务。操作界面偏简洁，适合希望快速浏览的用户。</p>
+    </div>
+
+    <!-- 亮点 / 特点 卡片网格 -->
+    <h2>✨ 几个值得关注的特点</h2>
+    <div class="card-list">
+        <div class="item">
+            <strong>信息密度适中</strong>
+            <span>页面布局以文字为主，关键数据突出，减少冗余装饰，加载速度较快。</span>
+        </div>
+        <div class="item">
+            <strong>分类清晰</strong>
+            <span>赛事、数据、专栏等模块分区明确，方便按需查找，减少无效点击。</span>
+        </div>
+        <div class="item">
+            <strong>无强制注册</strong>
+            <span>基础浏览与部分数据查看无需登录，降低使用门槛。</span>
+        </div>
+        <div class="item">
+            <strong>持续更新</strong>
+            <span>内容保持日常维护，重要信息会以首页摘要形式呈现。</span>
+        </div>
+    </div>
+
+    <!-- 使用建议 / 场景 -->
+    <h2>🧭 使用建议与场景</h2>
+    <p>根据多数用户的反馈，以下场景下使用 mk体育 体验较好：</p>
+    <ul style="margin: 0.4rem 0 0.8rem 1.6rem; color: #334155; line-height: 1.7;">
+        <li>快速查阅当日重点赛事与赛果汇总；</li>
+        <li>了解联赛积分榜、球队基础数据等核心统计；</li>
+        <li>阅读短篇体育资讯与赛事观察内容；</li>
+        <li>作为多信息源中的辅助参考，与其他平台交叉验证。</li>
+    </ul>
+    <p>如果你是首次接触该站点，建议先从首页的「热门」或「最新」版块开始，熟悉内容分类逻辑后再深入具体栏目。</p>
+
+    <!-- 可信但克制的访问说明 -->
+    <h2>📌 访问说明 · 请留意</h2>
+    <div class="notice-card">
+        <p><strong>⚠️ 信任边界与安全提醒</strong></p>
+        <p>mk体育 是一个公开可访问的网站，但在使用任何互联网服务时，都建议保持基本的谨慎：</p>
+        <ul style="margin: 0.4rem 0 0.2rem 1.3rem; color: #4a3b22; font-size: 0.94rem; line-height: 1.7;">
+            <li>不要在该站点输入个人敏感信息（如银行卡、密码、身份证号等）；</li>
+            <li>若站点提示下载未知软件或要求额外权限，请立即终止操作；</li>
+            <li>通过官方渠道访问 mk体育，避免使用第三方提供的陌生链接；</li>
+            <li>本站内容仅供信息参考，不构成任何专业建议或保证。</li>
+        </ul>
+        <p style="margin-top: 0.6rem;">以上提醒适用于所有体育类网站，mk体育 本身未发现异常行为，但用户仍应自行判断。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <h2>❓ 常见问题摘要</h2>
+    <div class="faq-item">
+        <q>是否需要付费才能使用全部功能？</q>
+        <p>目前 mk体育 的基础浏览、数据查询和资讯阅读均免费开放。部分高级分析或定制功能可能存在限制，以页面实际提示为准。</p>
+    </div>
+    <div class="faq-item">
+        <q>移动端适配如何？</q>
+        <p>页面采用响应式设计，手机浏览器中阅读体验良好，无需额外安装应用程序。</p>
+    </div>
+    <div class="faq-item">
+        <q>如何获取最新内容？</q>
+        <p>直接访问 <a href="https://mk-page-sport.com" class="inline-link">mk体育</a> 首页即可看到最新更新内容。你也可以根据个人兴趣关注特定板块。</p>
+    </div>
+
+    <hr>
+
+    <footer>
+        <span>本页为独立产品说明页 · 仅供介绍参考</span>
+        <span>内容基于公开信息整理 · 2025</span>
+    </footer>
+
+</div>
+</body>
+</html>
